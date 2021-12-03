@@ -1,46 +1,45 @@
-// Number of sides on curves. Higher number is smoother.
-$fn=50;
+// Number of sides on curves. Higher number is smoother. Don't do more than 500 unless you enjoy killing computers.
+$fn = 250;
 
-/* [General] */
-// True to render the cap
-render_cap = true;
-// True to render the barrel
-render_barrel = true;
-// True to render the barrel peg
-render_barrel_peg = true;
-// True to render the cap peg
-render_cap_peg = true;
+/* [Rendering] */
+// 1 to render the cap, 0 to omit it
+render_cap = 1;
+// 1 to render the barrel, 0 to omit it
+render_barrel = 1;
+// 1 to render the barrel peg, 0 to omit it
+render_barrel_peg = 1;
+// 1 to render the cap peg, 0 to omit it
+render_cap_peg = 1;
 
-/* [Barrel] */
+/* [Barrel (in mm)] */
 // Outer Radius
 barrel_outer_radius = 42.25;
 // Thickness
 barrel_thickness = 2;
 // Height, as measured from the outside
 barrel_height = 73.25;
-// Ridge Radius
+// Radius of the ridges inside the barrel
 barrel_ridge_radius = 5;
-// Ridge Height
+// Height of the ridges inside the barrel
 barrel_ridge_height = 50;
-// Height of the peg
-barrel_peg_height = 17;
 
-/* [Cap] */
+/* [Cap (in mm)] */
 // Height of the smaller part of the cap
 cap_lower_height = 18;
 // Height of the larger part of the cap
 cap_upper_height = 7;
 // How much larger (radius) the larger part of the cap is than the barrel
 cap_upper_overhang = 10.75;
-// Height of the peg
-cap_peg_height = 14;
 
-/* [pegs] */
-// peg Radius
+/* [Pegs (in mm)] */
+// Radius of the pegs
 peg_radius = 3;
-// peg Inset Depth
+// How deep the pegs are inserted
 peg_inset_depth = 10;
-
+// The amount that the peg will stick out of the barrel
+barrel_peg_height = 17;
+// The amount that the peg will stick out of the cap
+cap_peg_height = 14;
 
 // calculated convenience variables
 barrel_inner_radius = barrel_outer_radius - barrel_thickness;
